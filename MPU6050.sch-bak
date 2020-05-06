@@ -1,0 +1,215 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 4 7
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L MPU-6050:MPU-6050 U?
+U 1 1 5EAB58E0
+P 5900 3650
+F 0 "U?" H 5900 4717 50  0000 C CNN
+F 1 "MPU-6050" H 5900 4626 50  0000 C CNN
+F 2 "QFN50P400X400X95-24N" H 5900 3650 50  0001 L BNN
+F 3 "TDK" H 5900 3650 50  0001 L BNN
+F 4 "5.45 USD" H 5900 3650 50  0001 L BNN "Veld4"
+F 5 "MPU-6050" H 5900 3650 50  0001 L BNN "Veld5"
+F 6 "IPC-7351B" H 5900 3650 50  0001 L BNN "Veld6"
+F 7 "Good" H 5900 3650 50  0001 L BNN "Veld7"
+F 8 "3.4" H 5900 3650 50  0001 L BNN "Veld8"
+F 9 "QFN-24 InvenSense" H 5900 3650 50  0001 L BNN "Veld9"
+F 10 "IMU ACCEL/GYRO 3-AXIS I2C 24QFN" H 5900 3650 50  0001 L BNN "Veld10"
+	1    5900 3650
+	1    0    0    -1  
+$EndComp
+Text HLabel 4550 3850 0    50   Input ~ 0
+SCL
+Text HLabel 4550 3950 0    50   Input ~ 0
+SDA
+NoConn ~ 5300 3250
+$Comp
+L Arduino_Uno_R3_From_Scratch:3V3_LDO #PWR?
+U 1 1 5EAB6D8D
+P 6850 2850
+F 0 "#PWR?" H 6850 2810 30  0001 C CNN
+F 1 "3V3_LDO" H 6859 2988 30  0000 C CNN
+F 2 "" H 6850 2850 60  0000 C CNN
+F 3 "" H 6850 2850 60  0000 C CNN
+	1    6850 2850
+	1    0    0    -1  
+$EndComp
+NoConn ~ 5300 4150
+$Comp
+L power:GND #PWR?
+U 1 1 5EAB7DE4
+P 7500 4450
+F 0 "#PWR?" H 7500 4200 50  0001 C CNN
+F 1 "GND" H 7505 4277 50  0000 C CNN
+F 2 "" H 7500 4450 50  0001 C CNN
+F 3 "" H 7500 4450 50  0001 C CNN
+	1    7500 4450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6500 2850 6850 2850
+$Comp
+L power:GND #PWR?
+U 1 1 5EAB89B1
+P 4200 4450
+F 0 "#PWR?" H 4200 4200 50  0001 C CNN
+F 1 "GND" H 4205 4277 50  0000 C CNN
+F 2 "" H 4200 4450 50  0001 C CNN
+F 3 "" H 4200 4450 50  0001 C CNN
+	1    4200 4450
+	1    0    0    -1  
+$EndComp
+NoConn ~ 6500 3550
+NoConn ~ 6500 3650
+NoConn ~ 6500 3450
+$Comp
+L Device:C C3
+U 1 1 5EABBBAE
+P 7050 4150
+F 0 "C3" H 7165 4196 50  0000 L CNN
+F 1 "2.2n" H 7165 4105 50  0000 L CNN
+F 2 "" H 7088 4000 50  0001 C CNN
+F 3 "~" H 7050 4150 50  0001 C CNN
+	1    7050 4150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C2
+U 1 1 5EABC246
+P 6600 4150
+F 0 "C2" H 6715 4196 50  0000 L CNN
+F 1 "100n" H 6715 4105 50  0000 L CNN
+F 2 "" H 6638 4000 50  0001 C CNN
+F 3 "~" H 6600 4150 50  0001 C CNN
+	1    6600 4150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6500 4450 6600 4450
+Wire Wire Line
+	7050 4300 7050 4450
+Wire Wire Line
+	6600 4300 6600 4450
+Connection ~ 6600 4450
+Wire Wire Line
+	6600 4000 6600 3950
+Wire Wire Line
+	6600 3950 6500 3950
+Wire Wire Line
+	6600 4450 7050 4450
+Connection ~ 7050 4450
+$Comp
+L Device:C C?
+U 1 1 5EAC15BE
+P 7500 4150
+F 0 "C?" H 7615 4196 50  0000 L CNN
+F 1 "10n" H 7615 4105 50  0000 L CNN
+F 2 "" H 7538 4000 50  0001 C CNN
+F 3 "~" H 7500 4150 50  0001 C CNN
+	1    7500 4150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7050 3850 7050 4000
+Wire Wire Line
+	7050 3850 6500 3850
+Wire Wire Line
+	7500 4000 7500 2950
+Wire Wire Line
+	6500 2950 7500 2950
+Wire Wire Line
+	7350 3350 7350 4450
+Wire Wire Line
+	7500 4300 7500 4450
+Wire Wire Line
+	7350 3350 6500 3350
+Connection ~ 7350 4450
+Wire Wire Line
+	7350 4450 7500 4450
+Connection ~ 7500 4450
+Wire Wire Line
+	7050 4450 7350 4450
+Wire Wire Line
+	4200 3150 4200 3350
+Connection ~ 4200 3350
+Wire Wire Line
+	4200 3350 4200 3650
+Connection ~ 4200 3650
+Wire Wire Line
+	4200 3650 4200 4450
+$Comp
+L Arduino_Uno_R3_From_Scratch-cache:R R1
+U 1 1 5EACA448
+P 4700 4150
+F 0 "R1" H 4770 4196 50  0000 L CNN
+F 1 "2.2k" H 4770 4105 50  0000 L CNN
+F 2 "" V 4630 4150 30  0000 C CNN
+F 3 "" H 4700 4150 30  0000 C CNN
+	1    4700 4150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Arduino_Uno_R3_From_Scratch-cache:R R2
+U 1 1 5EACB6FC
+P 5000 4150
+F 0 "R2" H 5070 4196 50  0000 L CNN
+F 1 "2.2k" H 5070 4105 50  0000 L CNN
+F 2 "" V 4930 4150 30  0000 C CNN
+F 3 "" H 5000 4150 30  0000 C CNN
+	1    5000 4150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Arduino_Uno_R3_From_Scratch:3V3_LDO #PWR?
+U 1 1 5EACC3ED
+P 4850 4500
+F 0 "#PWR?" H 4850 4460 30  0001 C CNN
+F 1 "3V3_LDO" H 4859 4638 30  0000 C CNN
+F 2 "" H 4850 4500 60  0000 C CNN
+F 3 "" H 4850 4500 60  0000 C CNN
+	1    4850 4500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5000 4300 5000 4500
+Wire Wire Line
+	5000 4500 4850 4500
+Wire Wire Line
+	4850 4500 4700 4500
+Wire Wire Line
+	4700 4500 4700 4300
+Wire Wire Line
+	4700 4000 4700 3950
+Connection ~ 4850 4500
+Connection ~ 4700 3950
+Wire Wire Line
+	4550 3950 4700 3950
+Wire Wire Line
+	4550 3850 5000 3850
+Wire Wire Line
+	4200 3650 5300 3650
+Wire Wire Line
+	4200 3350 5300 3350
+Wire Wire Line
+	4200 3150 5300 3150
+Wire Wire Line
+	4700 3950 5300 3950
+Wire Wire Line
+	5000 4000 5000 3850
+Connection ~ 5000 3850
+Wire Wire Line
+	5000 3850 5300 3850
+$EndSCHEMATC
